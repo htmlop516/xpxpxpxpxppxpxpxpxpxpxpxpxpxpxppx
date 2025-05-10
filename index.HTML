@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Жуткий Windows XP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="taskbar">
+    <!-- Кнопка Пуск -->
+    <img src="assets/start-button.png" id="start-button" alt="Пуск" title="Пуск">
+  </div>
+
+  <div class="window" id="scary-window">
+    <div class="window-header">
+      Внимание!
+      <div class="close-btn" onclick="closeWindow()">✕</div>
+    </div>
+    <div class="window-content flicker">
+      <p><strong>Ошибка!</strong></p>
+      <p>Что-то пошло не так...</p>
+    </div>
+  </div>
+
+  <audio id="error-sound" src="assets/error.wav"></audio>  <!-- Звук ошибки -->
+  <audio id="scream-sound" src="assets/scream-sound.wav"></audio>  <!-- Звук скримера -->
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

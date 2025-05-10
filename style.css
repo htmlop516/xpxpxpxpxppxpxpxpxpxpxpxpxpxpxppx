@@ -1,0 +1,120 @@
+/* Общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('assets/xp-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Arial", sans-serif;
+  color: #00ff00;
+  overflow: hidden;
+}
+
+/* Панель задач */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #000080;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+#start-button {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.window {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #000080;
+  background-color: #c0c0c0;
+  display: none;
+  z-index: 10;
+}
+
+.window-header {
+  background-color: #000080;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.window-content {
+  padding: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.flicker {
+  animation: flicker-animation 1s infinite;
+}
+
+@keyframes flicker-animation {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* Анимация для ошибки */
+.error-img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: moveError 5s infinite, flicker 0.1s infinite;
+}
+
+@keyframes moveError {
+  0% {
+    top: -50px;
+    left: 50%;
+  }
+  25% {
+    top: 50%;
+    left: -50px;
+  }
+  50% {
+    top: 100%;
+    left: 50%;
+  }
+  75% {
+    top: 50%;
+    left: 100%;
+  }
+  100% {
+    top: -50px;
+    left: 50%;
+  }
+}
+
+.scream-img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 300px;
+  height: 300px;
+}
+
+
+
